@@ -19,14 +19,14 @@ document.querySelectorAll(".calc-container input[type=button]").forEach((e) => {
 let clearScreenTimmer = null;
 
 const createTimmer = () => {
-  clearTimmer = setTimeout(() => {
+  clearScreenTimmer = setTimeout(() => {
     const out = document.querySelector(".calc-container input[name=out]");
     out.value = "";
   }, 1000);
 }
 
 const removeTimmer = () => {
-  if (clearTimmer) clearTimeout(clearTimmer);
+  if (clearScreenTimmer) clearTimeout(clearScreenTimmer);
 }
 
 document.querySelector(".calc-container input[name=clear]").onmousedown = createTimmer;
